@@ -4,9 +4,6 @@
 <struts>
     <constant name="struts.devMode" value="true" />
     <constant name="struts.action.extension" value="xhtml,,xml,json,action"/>
-    <bean type="org.apache.struts2.dispatcher.mapper.ActionMapper" name="custom" class="com.config.CustomActionMapper" />
-	<constant name="struts.mapper.class" value="org.apache.struts2.dispatcher.mapper.PrefixBasedActionMapper" />
-	<constant name="struts.mapper.prefixMapping" value="/app:custom,/agent:custom,:struts" />
     <package name="default" namespace="/" extends="struts-default">
         
         <global-results>
@@ -18,10 +15,11 @@
 			<exception-mapping exception="java.lang.Exception" result="error" />
 		</global-exception-mappings>
         
-        <action name="login" class="com.controllers.LoginController" method="execute">
+        <action name="login">
         	<result name="success">/jsp/login.jsp</result>
-			<result name="loginerror">/jsp/error.jsp</result>
         </action>
+        
+        
         
         
         

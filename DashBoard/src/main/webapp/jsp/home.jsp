@@ -4,7 +4,7 @@
 <html>
 <body>
 <h1>Welcome To Struts 2!</h1>
-<p><a href="/login">Hello World</a></p>
+<p><a href="/login">Start Chat</a></p>
 
 </body>
 </html>
