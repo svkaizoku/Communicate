@@ -34,7 +34,7 @@ client.init(<appid>, function() {
 }, function(err) {
     console.log("client init failed ", err);
 });
-client.join(<temp-token>, "testing", null, (uid)=>{
+client.join(<temp-token>, <channel-name>, null, (uid)=>{
 	  // Create a local stream
 	let localStream = AgoraRTC.createStream({
 	    audio: true,
